@@ -1,7 +1,7 @@
 # ferDev27's custom build of DWM
 
-![dwm1](screenshots/dwm_1.png)
-![dwm2](screenshots/dwm_2.png)
+![dwm1](screenshots/dwm_one.png)
+![dwm2](screenshots/dwm_two.png)
 
 Suckless **[dwm](https://dwm.suckless.org/)**
 
