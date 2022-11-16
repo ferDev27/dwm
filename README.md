@@ -39,6 +39,7 @@ sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webki
 
 **Terminal:**
 - [st](https://st.suckless.org/)
+- I have my [own](https://github.com/ferDev27/st) build as well 
 
 **Menu:**
 - [dmenu](https://tools.suckless.org/dmenu/) 
@@ -74,7 +75,6 @@ sudo pacman -S redshift
 - Mononoki Nerd Font
 
 ```bash
-yay -S nerd-fonts-mononoki
 yay -S ttf-nerd-fonts-victor-mono
 ```
 
