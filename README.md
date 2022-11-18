@@ -72,7 +72,7 @@ sudo pacman -S redshift
 ```
 
 **Font:**
-- Mononoki Nerd Font
+- Victor Mono Nerd Font
 
 ```bash
 yay -S ttf-nerd-fonts-victor-mono
