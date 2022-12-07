@@ -24,11 +24,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 
 // ------------------------- Bar/innerPadding ----------------------------------
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 0;        /* vertical padding for statusbar */
+static const int vertpadbar         = 8;        /* vertical padding for statusbar */
 
 // ------------------------------ Fonts ----------------------------------------
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=14:weight=bold:antialias=true:autohint=true" };
-static const char dmenufont[]       = "UbuntuMono Nerd Font:size=14:weight=bold:antialias=true:autohint=true";
+static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true" };
+static const char dmenufont[]       = "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true";
 
 // ---------------------------- Workspaces -------------------------------------
 //static const char *tags[] = { " I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII ", " IX " };
@@ -96,7 +96,7 @@ static const char *monocles[] = { " ", " ", " ", " ", " ", " "
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 
 #include <X11/XF86keysym.h>
@@ -176,11 +176,11 @@ static Key keys[] = {
 	{ MODKEY, XK_Return, spawn, {.v = termcmd } },
 
 	// Dmenu
-	{ MODKEY, XK_space, spawn, {.v = dmenucmd } },
+	//{ MODKEY, XK_space, spawn, {.v = dmenucmd } },
 
     // Rofi
-	//{ MODKEY, XK_space, spawn, SHCMD("rofi -show drun")}, 
-	//{ MODKEY|ShiftMask, XK_space, spawn, SHCMD("rofi -show")}, 
+	{ MODKEY, XK_space, spawn, SHCMD("rofi -show drun")}, 
+	{ MODKEY|ShiftMask, XK_space, spawn, SHCMD("rofi -show")}, 
 
     // Browser
 	{ MODKEY, XK_b, spawn, SHCMD("firefox")}, 
