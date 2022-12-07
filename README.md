@@ -75,7 +75,7 @@ sudo pacman -S redshift
 - Victor Mono Nerd Font
 
 ```bash
-yay -S ttf-nerd-fonts-victor-mono
+yay -S nerd-fonts-ubuntu 
 ```
 
 **Status bar:**
