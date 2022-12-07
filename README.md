@@ -72,7 +72,7 @@ sudo pacman -S redshift
 ```
 
 **Font:**
-- Victor Mono Nerd Font
+- Ubuntu Mono Nerd Font
 
 ```bash
 yay -S nerd-fonts-ubuntu 
