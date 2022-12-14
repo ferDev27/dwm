@@ -2,6 +2,7 @@
 
 ![dwm1](screenshots/dwm_1.png)
 ![dwm2](screenshots/dwm_2.png)
+![dwm3](screenshots/dwm_3.png)
 
 Suckless **[dwm](https://dwm.suckless.org/)**
 
@@ -27,6 +28,8 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *uselessgap*
 - *warp*
 - *statuspadding-afterstatus2d*
+- *windowmap*
+- *monocle layout dont stack*
 
 
 **Dependencies, if you use different software feel free to tweak the config.h file.**

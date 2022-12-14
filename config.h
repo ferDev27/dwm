@@ -67,7 +67,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "Tall", tile },    /* first entry is default */
+	{ "Tile", tile },    /* first entry is default */
 	{ "CM", centeredmaster },
 	{ "Grid", grid },
 	{ "CMF", centeredfloatingmaster },
@@ -78,7 +78,7 @@ static const Layout layouts[] = {
 
 /* custom symbols for nr. of clients in monocle layout */
 /* when clients >= LENGTH(monocles), uses the last element */
-static const char *monocles[] = { " ", " ", " ", " ", " ", " ", " ", " ", " ", " "};
+static const char *monocles[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "9+"};
 
 
 // ----------------------------- Keybinds --------------------------------------
@@ -96,7 +96,7 @@ static const char *monocles[] = { " ", " ", " ", " ", " ", " "
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 
 #include <X11/XF86keysym.h>
