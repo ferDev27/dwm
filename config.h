@@ -24,7 +24,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 
 // ------------------------- Bar/innerPadding ----------------------------------
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 8;        /* vertical padding for statusbar */
+static const int vertpadbar         = 10;        /* vertical padding for statusbar */
 
 // ------------------------------ Fonts ----------------------------------------
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true" };
@@ -40,6 +40,8 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_wsbg, col_barbg, col_winUnSel },
 	[SchemeSel]  = { col_wsfg, col_tagbg, col_winSel },
+	[SchemeUSel]  = { col_wsbg, col_tagbg, col_winSel },
+	[SchemeTitle]  = { col_tifg, col_tibg,  col_tibg  },
 	[SchemeOcc]  = { col_occ, col_barbg, col_winUnSel },
 
 };
@@ -67,18 +69,18 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "Tile", tile },    /* first entry is default */
-	{ "CM", centeredmaster },
-	{ "Grid", grid },
-	{ "CMF", centeredfloatingmaster },
-	{ "Float", NULL },		/* no layout function means floating behavior */
-	{ "Monocle", monocle },	
+	{ "[]=", tile },    /* first entry is default */
+	{ "|M|", centeredmaster },
+	{ "HHH", grid },
+	{ ">M>", centeredfloatingmaster },
+	{ "><>", NULL },		/* no layout function means floating behavior */
+	{ "[M]", monocle },	
 	{ NULL, NULL },
 };
 
 /* custom symbols for nr. of clients in monocle layout */
 /* when clients >= LENGTH(monocles), uses the last element */
-static const char *monocles[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "9+"};
+static const char *monocles[] = { "[1]", "[2]", "[3]", "[4]", "[5]", "[6]", "[7]", "[8]", "[9]", "[9+]"};
 
 
 // ----------------------------- Keybinds --------------------------------------

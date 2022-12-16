@@ -17,7 +17,7 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *cyclelayouts*
 - *gridmode*
 - *movestack*
-- *notitle*
+- *titlecolor*
 - *pertag*
 - *preserveonrestart*
 - *restartsig*
