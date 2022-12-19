@@ -55,7 +55,7 @@ static const Rule rules[] = {
 	{ "Gimp", NULL, NULL, 0, 1, 0, 0, -1 },
 	{ "Firefox", NULL, NULL, 1 << 8, 0, 0, -1, -1 },
 	{ "st-256color", NULL, NULL, 0, 0, 1, 0, -1 },
-	{ "alacritty", NULL, NULL, 0, 0, 1, 0, -1 },
+	{ "Alacritty", NULL, NULL, 0, 0, 1, 0, -1 },
 	{ NULL, NULL, "Event Tester", 0, 0, 0, 1, -1 }, /* xev */
 };
 
@@ -98,7 +98,7 @@ static const char *monocles[] = { "[1]", "[2]", "[3]", "[4]", "[5]", "[6]", "[7]
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 
 #include <X11/XF86keysym.h>
