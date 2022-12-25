@@ -23,8 +23,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 // ------------------------- Bar/innerPadding ----------------------------------
-static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 10;        /* vertical padding for statusbar */
+static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
+static const int vertpadbar         = 12;        /* vertical padding for statusbar */
 
 // ------------------------------ Fonts ----------------------------------------
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true" };
@@ -56,6 +56,7 @@ static const Rule rules[] = {
 	{ "Firefox", NULL, NULL, 1 << 8, 0, 0, -1, -1 },
 	{ "st-256color", NULL, NULL, 0, 0, 1, 0, -1 },
 	{ "Alacritty", NULL, NULL, 0, 0, 1, 0, -1 },
+	{ "org.wezfurlong.wezterm", NULL, NULL, 0, 0, 1, 0, -1 },
 	{ NULL, NULL, "Event Tester", 0, 0, 0, 1, -1 }, /* xev */
 };
 
@@ -119,7 +120,7 @@ static Key keys[] = {
 	{ MODKEY, XK_l, setmfact, {.f = +0.05} },
 
 // ------------------------- Toggle Statusbar ----------------------------------
-	{ MODKEY, XK_s, togglebar, {0} },
+	{ MODKEY, XK_t, togglebar, {0} },
 
 // -------------------------- Move windows -------------------------------------
 	{ MODKEY|ShiftMask, XK_j, movestack, {.i = +1 } },
@@ -128,7 +129,7 @@ static Key keys[] = {
     // Make master
 	{ MODKEY, XK_m, zoom, {0} }, // Make Master
 
-// -------------------------- Kill windows -------------------------------------
+// --------------------------- Kill window -------------------------------------
 	{ MODKEY, XK_w, killclient, {0} },
 
 // -------------------------- Select Layout ------------------------------------
@@ -188,7 +189,7 @@ static Key keys[] = {
 	{ MODKEY, XK_b, spawn, SHCMD("firefox")}, 
 
     //Filemanager
-	//{ MODKEY, XK_f, spawn, SHCMD("")}, 
+	//{ MODKEY, XK_f, spawn, SHCMD("thunar")}, 
 
 	// Healthy eyes
 	{ MODKEY, XK_r, spawn, SHCMD("redshift -O 2400") },
@@ -196,8 +197,11 @@ static Key keys[] = {
 	
 
 	// Scrot (Screenshot)
-	{ MODKEY, XK_p, spawn, SHCMD("scrot /home/fer/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png")}, 
-	{ MODKEY|ShiftMask, XK_p, spawn, SHCMD("scrot /home/fer/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge")}, 
+	{ MODKEY, XK_s, spawn, SHCMD("scrot /home/fer/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png")}, 
+	{ MODKEY|ShiftMask, XK_s, spawn, SHCMD("scrot /home/fer/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge")}, 
+
+    // Color picker
+	{ MODKEY, XK_p, spawn, SHCMD("picker")}, 
 
 // ----------------------------- SysKeys ---------------------------------------
     // Volume
