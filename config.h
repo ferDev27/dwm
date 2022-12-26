@@ -196,9 +196,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask, XK_r, spawn, SHCMD("redshift -x") },
 	
 
-	// Scrot (Screenshot)
-	{ MODKEY, XK_s, spawn, SHCMD("scrot /home/fer/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png")}, 
-	{ MODKEY|ShiftMask, XK_s, spawn, SHCMD("scrot /home/fer/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge")}, 
+	// Screenshots
+	{ MODKEY, XK_s, spawn, SHCMD("screenshot")}, 
+	{ MODKEY|ShiftMask, XK_s, spawn, SHCMD("screenshot-s")}, 
 
     // Color picker
 	{ MODKEY, XK_p, spawn, SHCMD("picker")}, 
