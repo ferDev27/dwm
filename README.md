@@ -29,7 +29,8 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *warp*
 - *statuspadding-afterstatus2d*
 - *windowmap*
-- *monocle layout dont stack*
+- *monocle layout doesn't stack the windows*
+- *Systray, with icon size*
 
 
 **Dependencies, if you use different software feel free to tweak the config.h file.**
@@ -139,4 +140,16 @@ sudo pacman -S xclip
 ```bash
 sudo pacman -S wmname pacman-contrib
 ```
+
+**Optional:**
+- Better formatting output:<br>
+
+```bash
+sudo pacman -S jq tidy
+```
+
+- CLI picker and image processing
  
+```bash
+sudo pacman -S gpick imagemagick
+```
