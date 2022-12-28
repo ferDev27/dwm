@@ -90,6 +90,26 @@ yay -S nerd-fonts-ubuntu
 **Status bar:**
 - [dwmblocks](https://github.com/torrinfail/dwmblocks)
 
+**Notifications**
+- If you want notifications, you will need:
+
+```bash
+sudo pacman -S libnotify notification-daemon
+```
+
+- In the case of Tiling Window Managers, create this file:
+```bash
+sudo touch /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+```
+
+And paste these:
+```bash
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=/usr/lib/notification-daemon-1.0/notification-daemon
+```
+
+Check the Arch wiki for [details](https://wiki.archlinux.org/index.php/Desktop_notifications#Standalone)
 
 ***Additional software that I use alongside the WM:***
 
