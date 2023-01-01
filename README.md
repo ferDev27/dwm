@@ -23,7 +23,6 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *restartsig*
 - *status2d*
 - *status2d-swap-save-res*
-- *statusallmons*
 - *swallow*
 - *uselessgap*
 - *warp*
