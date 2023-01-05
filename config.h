@@ -200,7 +200,7 @@ static Key keys[] = {
 	//{ MODKEY, XK_f, spawn, SHCMD("thunar")}, 
 
 	// Healthy eyes
-	{ MODKEY, XK_r, spawn, SHCMD("redshift -O 2400") },
+	{ MODKEY, XK_r, spawn, SHCMD("redshift -O 3400") },
 	{ MODKEY|ShiftMask, XK_r, spawn, SHCMD("redshift -x") },
 	
 
