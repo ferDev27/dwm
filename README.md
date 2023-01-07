@@ -4,9 +4,13 @@
 ![dwm2](screenshots/dwm_2.png)
 ![dwm3](screenshots/dwm_3.png)
 
+# Showcase:
+[![Showcase](screenshots/yt.png)](https://youtu.be/r-ckyZHcYIo)
+
+
 Suckless **[dwm](https://dwm.suckless.org/)**
 
-**Patches included:**
+# Patches included:
 
 - *alwayscenter*
 - *attachbottom*
@@ -32,7 +36,8 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *Systray, with icon size*
 
 
-**Dependencies, if you use different software feel free to tweak the config.h file.**
+# Dependencies:
+**If you use different software feel free to tweak the config.h file.**
 **Assuming a base install of Arch linux:**
 - First we will need some basic things:
 
