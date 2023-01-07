@@ -1,16 +1,21 @@
 # ferDev27's custom build of DWM
 
-![dwm1](screenshots/dwm_1.png)
 ![dwm2](screenshots/dwm_2.png)
 ![dwm3](screenshots/dwm_3.png)
 
-# Showcase:
+# Contents
+- [Youtube showcase](#showcase)
+- [Patches included](#patches)
+- [Additional software](#additional-software)
+
+
+# Showcase
 [![Showcase](screenshots/yt.png)](https://youtu.be/r-ckyZHcYIo)
 
 
 Suckless **[dwm](https://dwm.suckless.org/)**
 
-# Patches included:
+# Patches
 
 - *alwayscenter*
 - *attachbottom*
@@ -36,7 +41,7 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *Systray, with icon size*
 
 
-# Dependencies:
+# Dependencies
 **If you use different software feel free to tweak the config.h file.**
 **Assuming a base install of Arch linux:**
 - First we will need some basic things:
@@ -115,7 +120,8 @@ Exec=/usr/lib/notification-daemon-1.0/notification-daemon
 
 Check the Arch wiki for [details](https://wiki.archlinux.org/index.php/Desktop_notifications#Standalone)
 
-***Additional software that I use alongside the WM:***
+# Additional software
+***Software that I use alongside the WM:***
 
 **Compositor:**
 - picom
