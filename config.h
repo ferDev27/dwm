@@ -191,7 +191,7 @@ static Key keys[] = {
 
     // Rofi
 	{ MODKEY, XK_space, spawn, SHCMD("rofi -show drun")}, 
-	{ MODKEY|ShiftMask, XK_space, spawn, SHCMD("rofi -show")}, 
+	{ MODKEY|ShiftMask, XK_space, spawn, SHCMD("rofi -show run")},
 
     // Browser
 	{ MODKEY, XK_b, spawn, SHCMD("firefox")}, 

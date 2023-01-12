@@ -62,6 +62,12 @@ sudo pacman -S alacritty
 **Menu:**
 - [dmenu](https://tools.suckless.org/dmenu/) 
 
+- Rofi
+
+```bash
+sudo pacman -S rofi
+```
+
 **File Manager:**
 - ranger
 
