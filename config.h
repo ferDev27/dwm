@@ -107,7 +107,7 @@ static const char *monocles[] = { "[1]", "[2]", "[3]", "[4]", "[5]", "[6]", "[7]
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 
 #include <X11/XF86keysym.h>
@@ -186,12 +186,12 @@ static Key keys[] = {
 	// Terminal
 	{ MODKEY, XK_Return, spawn, {.v = termcmd } },
 
-	// Dmenu
-	//{ MODKEY, XK_space, spawn, {.v = dmenucmd } },
+    // Dmenu
+	{ MODKEY, XK_space, spawn, SHCMD("dmenu_run -l 20 -c")}, 
 
     // Rofi
-	{ MODKEY, XK_space, spawn, SHCMD("rofi -show drun")}, 
-	{ MODKEY|ShiftMask, XK_space, spawn, SHCMD("rofi -show run")},
+	//{ MODKEY, XK_space, spawn, SHCMD("rofi -show drun")}, 
+	//{ MODKEY|ShiftMask, XK_space, spawn, SHCMD("rofi -show run")},
 
     // Browser
 	{ MODKEY, XK_b, spawn, SHCMD("firefox")}, 
