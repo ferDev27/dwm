@@ -39,8 +39,7 @@ static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bol
 static const char dmenufont[]       = "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true";
 
 // ---------------------------- Workspaces -------------------------------------
-//static const char *tags[] = { " I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII ", " IX " };
-static const char *tags[] = { "   ", " 󰨞  ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " };
+static const char *tags[] = { "   ", "   ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " };
 //static const char *tags[] = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " };
 
 // ----------------------------- Colors ----------------------------------------

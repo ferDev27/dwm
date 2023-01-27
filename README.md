@@ -99,7 +99,7 @@ sudo pacman -S redshift
 - Ubuntu Mono Nerd Font
 
 ```bash
-yay -S nerd-fonts-ubuntu 
+sudo pacman -S ttf-ubuntu-mono-nerd 
 ```
 
 **Status bar:**
