@@ -7,7 +7,7 @@ static const char col_barbg[]		= "#0f101a";
 static const char col_tagbg[]		= "#7e4dcc";  
 
 // Window border
-static const char col_winSel[]		= "#7a5ccc";
+static const char col_winSel[]		= "#7e4dcc";
 static const char col_winUnSel[]	= "#1a1b26";
 
 // tag icons/numbers fg(selected) and bg(empty)

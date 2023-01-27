@@ -17,3 +17,6 @@ static const char col_wsbg[]		= "#";
 // Occupied tag
 static const char col_occ[]         = "#"; 
 
+// title
+static const char col_tifg[]         = "#";
+static const char col_tibg[]         = "#";

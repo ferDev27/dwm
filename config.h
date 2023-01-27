@@ -12,7 +12,7 @@ GitHub: https://github.com/ferDev27
 */
 
 // --------------------------- Theme Selection ---------------------------------
-#include "./themes/ferdev27.h"
+#include "./themes/night2049.h"
 
 // --------------------------- Gaps/Borders ------------------------------------
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -40,7 +40,7 @@ static const char dmenufont[]       = "UbuntuMono Nerd Font:size=12:weight=bold:
 
 // ---------------------------- Workspaces -------------------------------------
 //static const char *tags[] = { " I ", " II ", " III ", " IV ", " V ", " VI ", " VII ", " VIII ", " IX " };
-static const char *tags[] = { "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   " };
+static const char *tags[] = { "   ", " 󰨞  ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " };
 //static const char *tags[] = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " };
 
 // ----------------------------- Colors ----------------------------------------
@@ -107,7 +107,7 @@ static const char *monocles[] = { "[1]", "[2]", "[3]", "[4]", "[5]", "[6]", "[7]
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 
 #include <X11/XF86keysym.h>
