@@ -102,6 +102,12 @@ sudo pacman -S redshift
 sudo pacman -S ttf-ubuntu-mono-nerd 
 ```
 
+- Emoji font
+
+```bash
+sudo pacman -S noto-fonts-emoji
+```
+
 **Status bar:**
 - [dwmblocks](https://github.com/torrinfail/dwmblocks)
 

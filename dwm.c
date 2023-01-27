@@ -79,7 +79,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel, SchemeUSel, SchemeTitle, SchemeOcc }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeTitle, SchemeOcc }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
        NetSystemTray, NetSystemTrayOP, NetSystemTrayOrientation, NetSystemTrayOrientationHorz,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
@@ -1079,17 +1079,13 @@ drawbar(Monitor *m)
 	x = 0;
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(tags[i]);
-        if (m->sel) {
-		    drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : (occ & 1 << i ? SchemeOcc : SchemeNorm)]);
-        } else {
-		    drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeUSel : (occ & 1 << i ? SchemeOcc : SchemeNorm)]);
-        }
+        drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : (occ & 1 << i ? SchemeOcc : SchemeNorm)]);
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
 		x += w;
 	}
 	w = blw = TEXTW(m->ltsymbol);
     if (m->sel) {
-        drw_setscheme(drw, scheme[m == selmon ? SchemeTitle : SchemeNorm]);
+        drw_setscheme(drw, scheme[SchemeTitle]);
     } else {
         drw_setscheme(drw, scheme[SchemeNorm]);
     }

@@ -39,7 +39,8 @@ static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bol
 static const char dmenufont[]       = "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true";
 
 // ---------------------------- Workspaces -------------------------------------
-static const char *tags[] = { "   ", "   ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " };
+static const char *tags[] = { "   ", "   ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " }; // Vim
+//static const char *tags[] = { "   ", " 󰨞  ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " }; // VSCode
 //static const char *tags[] = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " };
 
 // ----------------------------- Colors ----------------------------------------
@@ -47,7 +48,6 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_wsbg, col_barbg, col_winUnSel },
 	[SchemeSel]  = { col_wsfg, col_tagbg, col_winSel },
-	[SchemeUSel]  = { col_wsbg, col_tagbg, col_winSel },
 	[SchemeTitle]  = { col_tifg, col_tibg,  col_tibg  },
 	[SchemeOcc]  = { col_occ, col_barbg, col_winUnSel },
 
