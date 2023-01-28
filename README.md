@@ -1,7 +1,6 @@
 # ferDev27's custom build of DWM
 
-![dwm2](screenshots/dwm_2.png)
-![dwm3](screenshots/dwm_3.png)
+![dwm1](screenshots/dwm_1.png)
 
 # Contents
 - [Youtube showcase](#showcase)
