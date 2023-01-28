@@ -31,7 +31,7 @@ static const int showsystray        = 1;     /* 0 means no systray */
 // ------------------------- Bar/innerPadding ----------------------------------
 static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
-static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
+static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 12;        /* vertical padding for statusbar */
 
 // ------------------------------ Fonts ----------------------------------------
@@ -49,8 +49,32 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_wsbg, col_barbg, col_winUnSel },
 	[SchemeSel]  = { col_wsfg, col_tagbg, col_winSel },
 	[SchemeTitle]  = { col_tifg, col_tibg,  col_tibg  },
-	[SchemeOcc]  = { col_occ, col_barbg, col_winUnSel },
+};
 
+// Selected tags
+static const char *tagsel[][2] = {
+	{ col_tag1, col_tagbg },
+	{ col_tag2, col_tagbg },
+	{ col_tag3, col_tagbg },
+	{ col_tag4, col_tagbg },
+	{ col_tag5, col_tagbg },
+	{ col_tag6, col_tagbg },
+	{ col_tag7, col_tagbg },
+	{ col_tag8, col_tagbg },
+	{ col_tag9, col_tagbg },
+};
+
+// Occupied tags
+static const char *tagOcc[][2] = {
+	{ col_tag1, col_barbg },
+	{ col_tag2, col_barbg },
+	{ col_tag3, col_barbg },
+	{ col_tag4, col_barbg },
+	{ col_tag5, col_barbg },
+	{ col_tag6, col_barbg },
+	{ col_tag7, col_barbg },
+	{ col_tag8, col_barbg },
+	{ col_tag9, col_barbg },
 };
 
 static const Rule rules[] = {

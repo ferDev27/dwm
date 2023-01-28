@@ -27,6 +27,7 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *gridmode*
 - *movestack*
 - *titlecolor*
+- *rainbowtags*
 - *pertag*
 - *preserveonrestart*
 - *restartsig*

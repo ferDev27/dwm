@@ -28,11 +28,34 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 	[SchemeTitle]  = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeOcc]  = { col_red, col_gray1, col_gray2 },
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+
+static const char *tagsel[][2] = {
+	{ "#ffffff", "#ff0000" },
+	{ "#ffffff", "#ff7f00" },
+	{ "#000000", "#ffff00" },
+	{ "#000000", "#00ff00" },
+	{ "#ffffff", "#0000ff" },
+	{ "#ffffff", "#4b0082" },
+	{ "#ffffff", "#9400d3" },
+	{ "#000000", "#ffffff" },
+	{ "#ffffff", "#000000" },
+};
+
+static const char *tagOcc[][2] = {
+	{ "#FF662A", "#ff0000"},
+	{ "#20A2F0", "#ff7f00" },
+	{ "#f1ffff", "#ffff00" },
+	{ "#FBFBFB", "#00ff00" },
+	{ "#F44C26", "#0000ff" },
+	{ "#1F97EE", "#4b0082" },
+	{ "#F8C63D", "#9400d3" },
+	{ "#9BBC59", "#ffffff" },
+	{ "#7e4dcc", "#000000" },
+};
 
 static const Rule rules[] = {
 	/* xprop(1):

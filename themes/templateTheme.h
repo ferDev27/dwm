@@ -14,9 +14,17 @@ static const char col_winUnSel[]	= "#";
 static const char col_wsfg[]		= "#"; 
 static const char col_wsbg[]		= "#"; 
 
-// Occupied tag
-static const char col_occ[]         = "#"; 
-
 // title
 static const char col_tifg[]         = "#";
 static const char col_tibg[]         = "#";
+
+// Tags
+static const char col_tag1[]         = "#"; 
+static const char col_tag2[]         = "#"; 
+static const char col_tag3[]         = "#"; 
+static const char col_tag4[]         = "#"; 
+static const char col_tag5[]         = "#"; 
+static const char col_tag6[]         = "#"; 
+static const char col_tag7[]         = "#"; 
+static const char col_tag8[]         = "#"; 
+static const char col_tag9[]         = "#"; 
