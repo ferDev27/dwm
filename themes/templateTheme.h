@@ -28,3 +28,6 @@ static const char col_tag6[]         = "#";
 static const char col_tag7[]         = "#"; 
 static const char col_tag8[]         = "#"; 
 static const char col_tag9[]         = "#"; 
+
+// ---------------------------- Workspaces -------------------------------------
+static const char *tags[] = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " };

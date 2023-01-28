@@ -4,7 +4,7 @@
 static const char col_barbg[]		= "#11111B"; 
 
 //Tag square bg
-static const char col_tagbg[]		= "#202033";  
+static const char col_tagbg[]		= "#222236";  
 
 // Window border
 static const char col_winSel[]		= "#514F9E";
@@ -20,7 +20,7 @@ static const char col_tibg[]         = "#11111B";
 
 // Tags
 static const char col_tag1[]         = "#FF662A"; 
-static const char col_tag2[]         = "#009930"; 
+static const char col_tag2[]         = "#20A2F0"; 
 static const char col_tag3[]         = "#f1ffff"; 
 static const char col_tag4[]         = "#FBFBFB"; 
 static const char col_tag5[]         = "#F44C26"; 
@@ -28,3 +28,6 @@ static const char col_tag6[]         = "#1F97EE";
 static const char col_tag7[]         = "#F8C63D"; 
 static const char col_tag8[]         = "#9BBC59"; 
 static const char col_tag9[]         = "#7e4dcc"; 
+
+// ---------------------------- Workspaces -------------------------------------
+static const char *tags[] = { "   ", " 󰨞  ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " };

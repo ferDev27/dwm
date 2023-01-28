@@ -12,7 +12,7 @@ GitHub: https://github.com/ferDev27
 */
 
 // --------------------------- Theme Selection ---------------------------------
-#include "./themes/night2049.h"
+#include "./themes/ferdev27.h"
 
 // --------------------------- Gaps/Borders ------------------------------------
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -37,11 +37,6 @@ static const int vertpadbar         = 12;        /* vertical padding for statusb
 // ------------------------------ Fonts ----------------------------------------
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true" };
 static const char dmenufont[]       = "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true";
-
-// ---------------------------- Workspaces -------------------------------------
-static const char *tags[] = { "   ", "   ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " }; // Vim
-//static const char *tags[] = { "   ", " 󰨞  ", "   ", "   ", "   ", " 󰡨  ", "   ", "   ", "   " }; // VSCode
-//static const char *tags[] = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 " };
 
 // ----------------------------- Colors ----------------------------------------
 static const char *colors[][3]      = {
