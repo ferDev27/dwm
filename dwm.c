@@ -1081,11 +1081,13 @@ drawbar(Monitor *m)
 	x = 0;
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(tags[i]);
+        /* Occupied tag match tag color */
         drw_setscheme(drw, (m->tagset[m->seltags] & 1 << i ? tagscheme[i] : occ & 1 << i ? tagschemeOcc[i] : scheme[SchemeNorm]));
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
 		x += w;
 	}
 	w = blw = TEXTW(m->ltsymbol);
+    /* Dynamic highlighting */
     if (m->sel) {
         drw_setscheme(drw, scheme[SchemeTitle]);
     } else {
