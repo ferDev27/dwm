@@ -5,6 +5,9 @@
 # Contents
 - [Youtube showcase](#showcase)
 - [Patches included](#patches)
+- [Extra features](#extra)
+- [Future plans](#future)
+- [Dependencies](#dependencies)
 - [Additional software](#additional-software)
 
 
@@ -15,30 +18,43 @@
 Suckless **[dwm](https://dwm.suckless.org/)**
 
 # Patches
-
 - *alwayscenter*
 - *attachbottom*
 - *autostart(.local/share/dwm/autostart.sh)*
+- *bottomstack*
 - *centeredmaster*
-- *clientmonoclesymbol*
-- *coloredtag*
+- *cursorwarp*
 - *cyclelayouts*
-- *gridmode*
+- *fibonacci*
+- *gaplessgrid*
 - *movestack*
-- *titlecolor*
-- *rainbowtags*
 - *pertag*
-- *preserveonrestart*
-- *restartsig*
+- *rainbowtags*
 - *status2d*
-- *status2d-swap-save-res*
+- *Systray*
+- *statuspadding*
 - *swallow*
+- *titlecolor*
+- *underlinetags*
 - *uselessgap*
-- *warp*
-- *statuspadding-afterstatus2d*
 - *windowmap*
-- *monocle layout doesn't stack the windows*
-- *Systray, with icon size*
+
+
+# Extra
+- Monocle layout doesn't stack the windows.
+- Customizable systray iconsize.
+- Fix transparent borders when using a compositor like picom.
+- Added dynamic layout symbol highlighting.
+- Occupied tags match it's own color, box indicator removed.
+- Streamline some layouts patches.
+- Fix gaps not displaying correctly.
+
+
+# Future
+**Future plans and patches I would like to implement**
+- preserveonrestart patch
+- restartsig patch
+- Keep it up to date with the latest dwm commits 
 
 
 # Dependencies
@@ -61,12 +77,6 @@ sudo pacman -S alacritty
 
 **Menu:**
 - [dmenu](https://tools.suckless.org/dmenu/) 
-
-- Rofi
-
-```bash
-sudo pacman -S rofi
-```
 
 **File Manager:**
 - ranger
