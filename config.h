@@ -33,42 +33,42 @@ static const int horizpadbar        = 2;    /* horizontal padding for statusbar 
 static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 
 // Font
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:weight=bold:antialias=true:autohint=true" };
+static const char *fonts[]          = { "UbuntuMono Nerd Font:size=11:weight=bold:antialias=true:autohint=true" };
 
 // Set theme
-#include "./themes/night2049.h"
+#include "./themes/ferDev27.h"
 
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_icoUnsel, col_barbg, col_winUnSel },
-	[SchemeSel]  = { col_icosel, col_tagbg, col_winSel },
-	[SchemeTitle]  = { col_tifg, col_tibg,  col_tibg  },
+  /*               fg         bg         border   */
+  [SchemeNorm] = { col_icoUnsel, col_barbg, col_winUnSel },
+  [SchemeSel]  = { col_icosel, col_tagbg, col_winSel },
+  [SchemeTitle]  = { col_tifg, col_tibg,  col_tibg  },
 };
 
 //  Selected tags
 static const char *tagsel[][2] = {
-	{ col_tag1, col_tagbg },
-	{ col_tag2, col_tagbg },
-	{ col_tag3, col_tagbg },
-	{ col_tag4, col_tagbg },
-	{ col_tag5, col_tagbg },
-	{ col_tag6, col_tagbg },
-	{ col_tag7, col_tagbg },
-	{ col_tag8, col_tagbg },
-	{ col_tag9, col_tagbg },
+  { col_tag1, col_tagbg },
+  { col_tag2, col_tagbg },
+  { col_tag3, col_tagbg },
+  { col_tag4, col_tagbg },
+  { col_tag5, col_tagbg },
+  { col_tag6, col_tagbg },
+  { col_tag7, col_tagbg },
+  { col_tag8, col_tagbg },
+  { col_tag9, col_tagbg },
 };
 
 //  Occupied tags
 static const char *tagOcc[][2] = {
-	{ col_tag1, col_barbg },
-	{ col_tag2, col_barbg },
-	{ col_tag3, col_barbg },
-	{ col_tag4, col_barbg },
-	{ col_tag5, col_barbg },
-	{ col_tag6, col_barbg },
-	{ col_tag7, col_barbg },
-	{ col_tag8, col_barbg },
-	{ col_tag9, col_barbg },
+  { col_tag1, col_barbg },
+  { col_tag2, col_barbg },
+  { col_tag3, col_barbg },
+  { col_tag4, col_barbg },
+  { col_tag5, col_barbg },
+  { col_tag6, col_barbg },
+  { col_tag7, col_barbg },
+  { col_tag8, col_barbg },
+  { col_tag9, col_barbg },
 };
 
 //  Underline
@@ -78,14 +78,15 @@ static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the b
 static const int ulineall 		        = 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
-	/* class            instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Alacritty",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ "st-256color",    NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+  /* xprop(1):
+   *	WM_CLASS(STRING) = instance, class
+   *	WM_NAME(STRING) = title
+   */
+  /* class            instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+  { "Alacritty",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+  { "st-256color",    NULL,     NULL,           0,         0,          1,           0,        -1 },
+  { "firefox",        NULL,     NULL,           1 << 0,    0,          0,          -1,        -1 },
+  { NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -98,15 +99,15 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #include "fibonacci.c"
 
 static const Layout layouts[] = {
-	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "|M|",      centeredmaster },
- 	{ "[@]",      spiral },
-    { ":::",      gaplessgrid },
-	{ "TTT",      bstack },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
-	{ NULL,       NULL },
+  /* symbol     arrange function */
+  { "[]=",      tile },    /* first entry is default */
+  { "|M|",      centeredmaster },
+  { "[@]",      spiral },
+  { ":::",      gaplessgrid },
+  { "TTT",      bstack },
+  { "><>",      NULL },    /* no layout function means floating behavior */
+  { "[M]",      monocle },
+  { NULL,       NULL },
 };
 
 /* key definitions */
@@ -129,116 +130,117 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const Key keys[] = {
 
     //  Movement 
-	{ MODKEY, XK_j, focusstack, {.i = +1 } },
-	{ MODKEY, XK_k, focusstack, {.i = -1 } },
+  { MODKEY, XK_j, focusstack, {.i = +1 } },
+  { MODKEY, XK_k, focusstack, {.i = -1 } },
 
-	{ MODKEY|ShiftMask, XK_j, movestack, {.i = +1 } },
-	{ MODKEY|ShiftMask, XK_k, movestack, {.i = -1 } },
+  { MODKEY|ShiftMask, XK_j, movestack, {.i = +1 } },
+  { MODKEY|ShiftMask, XK_k, movestack, {.i = -1 } },
 
     //  Resize 
-    { MODKEY|ShiftMask, XK_c, incnmaster, {.i = +1 } },
-    { MODKEY, XK_c, incnmaster, {.i = -1 } },
-	{ MODKEY, XK_h, setmfact, {.f = -0.05} },
-	{ MODKEY, XK_l, setmfact, {.f = +0.05} },
+  { MODKEY|ShiftMask, XK_c, incnmaster, {.i = +1 } },
+  { MODKEY, XK_c, incnmaster, {.i = -1 } },
+  { MODKEY, XK_h, setmfact, {.f = -0.05} },
+  { MODKEY, XK_l, setmfact, {.f = +0.05} },
 
     //  Toggle Statusbar 
-	{ MODKEY, XK_t, togglebar, {0} },
+  { MODKEY, XK_t, togglebar, {0} },
 
     // Make master
-	{ MODKEY, XK_m, zoom, {0} },
+  { MODKEY, XK_m, zoom, {0} },
 
     //  Kill window
-	{ MODKEY, XK_w, killclient, {0} },
+  { MODKEY, XK_w, killclient, {0} },
 
     //  Cycle Layouts 
-	{ MODKEY, XK_Tab, cyclelayout, {.i = +1 } },
-	{ MODKEY|ShiftMask, XK_Tab, cyclelayout, {.i = -1 } },
+  { MODKEY, XK_Tab, cyclelayout, {.i = +1 } },
+  { MODKEY|ShiftMask, XK_Tab, cyclelayout, {.i = -1 } },
 
     //  Set layout 
-	// { MODKEY, XK_t, setlayout, {.v = &layouts[0]} },
-	// { MODKEY, XK_f, setlayout, {.v = &layouts[1]} },
-	// { MODKEY, XK_m, setlayout, {.v = &layouts[2]} },
-	// { MODKEY, XK_u, setlayout, {.v = &layouts[3]} },
-	// { MODKEY, XK_o, setlayout, {.v = &layouts[4]} },
-	// { MODKEY, XK_g, setlayout, {.v = &layouts[5]} },
-	// { MODKEY, XK_r, setlayout, {.v = &layouts[6]} },
-	// { MODKEY, XK_space, setlayout, {0} },
-	// { MODKEY|ShiftMask, XK_space, togglefloating, {0} },
+  // { MODKEY, XK_t, setlayout, {.v = &layouts[0]} },
+  // { MODKEY, XK_f, setlayout, {.v = &layouts[1]} },
+  // { MODKEY, XK_m, setlayout, {.v = &layouts[2]} },
+  // { MODKEY, XK_u, setlayout, {.v = &layouts[3]} },
+  // { MODKEY, XK_o, setlayout, {.v = &layouts[4]} },
+  // { MODKEY, XK_g, setlayout, {.v = &layouts[5]} },
+  // { MODKEY, XK_r, setlayout, {.v = &layouts[6]} },
+  // { MODKEY, XK_space, setlayout, {0} },
+  // { MODKEY|ShiftMask, XK_space, togglefloating, {0} },
 
     //  View Tags 
-	{ MODKEY, XK_0, view, {.ui = ~0 } },
-	// { MODKEY, XK_Tab, view, {0} },
-	// { MODKEY|ShiftMask, XK_0, tag, {.ui = ~0 } },
+  { MODKEY, XK_0, view, {.ui = ~0 } },
+  // { MODKEY, XK_Tab, view, {0} },
+  // { MODKEY|ShiftMask, XK_0, tag, {.ui = ~0 } },
 
     //  Monitor
-	{ MODKEY, XK_comma, focusmon, {.i = -1 } },
-	{ MODKEY, XK_period, focusmon, {.i = +1 } },
+  { MODKEY, XK_comma, focusmon, {.i = -1 } },
+  { MODKEY, XK_period, focusmon, {.i = +1 } },
 
-	{ MODKEY|ShiftMask, XK_comma, tagmon, {.i = -1 } },
-	{ MODKEY|ShiftMask, XK_period, tagmon, {.i = +1 } },
+  { MODKEY|ShiftMask, XK_comma, tagmon, {.i = -1 } },
+  { MODKEY|ShiftMask, XK_period, tagmon, {.i = +1 } },
 
     //  Tags
-	TAGKEYS( XK_1, 0)
-	TAGKEYS( XK_2, 1)
-	TAGKEYS( XK_3, 2)
-	TAGKEYS( XK_4, 3)
-	TAGKEYS( XK_5, 4)
-	TAGKEYS( XK_6, 5)
-	TAGKEYS( XK_7, 6)
-	TAGKEYS( XK_8, 7)
-	TAGKEYS( XK_9, 8)
+  TAGKEYS( XK_1, 0)
+  TAGKEYS( XK_2, 1)
+  TAGKEYS( XK_3, 2)
+  TAGKEYS( XK_4, 3)
+  TAGKEYS( XK_5, 4)
+  TAGKEYS( XK_6, 5)
+  TAGKEYS( XK_7, 6)
+  TAGKEYS( XK_8, 7)
+  TAGKEYS( XK_9, 8)
 
     //  Quit
-	{ MODKEY|ControlMask, XK_q, quit, {0} },
+  { MODKEY|ControlMask, XK_q, quit, {0} },
 
-	//  Terminal
-	{ MODKEY, XK_Return, spawn, {.v = termcmd } },
+    //  Terminal
+  { MODKEY, XK_Return, spawn, {.v = termcmd } },
 
     //  Dmenu
-	{ MODKEY, XK_space, spawn, SHCMD("dmenu_run -l 20 -c")}, 
+  { MODKEY, XK_space, spawn, SHCMD("dmenu_run -l 10")}, 
+  { MODKEY|ControlMask, XK_space, spawn, SHCMD("dmenuunicode")}, 
 
     //  Browser
-	{ MODKEY, XK_b, spawn, SHCMD("firefox")}, 
+  { MODKEY, XK_b, spawn, SHCMD("firefox")}, 
 
-	//  Healthy eyes
-	{ MODKEY, XK_r, spawn, SHCMD("redshift -O 3400") },
-	{ MODKEY|ShiftMask, XK_r, spawn, SHCMD("redshift -x") },
+    //  Healthy eyes
+  { MODKEY, XK_r, spawn, SHCMD("redshift -O 4400") },
+  { MODKEY|ShiftMask, XK_r, spawn, SHCMD("redshift -x") },
 
-	//  Screenshots
-	{ MODKEY, XK_s, spawn, SHCMD("screenshot")}, 
-	{ MODKEY|ShiftMask, XK_s, spawn, SHCMD("screenshot-s")}, 
+    //  Screenshots
+  { MODKEY, XK_s, spawn, SHCMD("screenshot")}, 
+  { MODKEY|ShiftMask, XK_s, spawn, SHCMD("screenshot-s")}, 
 
     //  Color picker
-	{ MODKEY, XK_p, spawn, SHCMD("picker")}, 
+  { MODKEY, XK_p, spawn, SHCMD("picker")}, 
 
     //  SysKeys
     //  Volume
-    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
-    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
-    {0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
+  {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
+  {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
+  {0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
 
     //  Mic
-    { 0, XF86XK_AudioMicMute, spawn, SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
+  { 0, XF86XK_AudioMicMute, spawn, SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
 
     //  Brightness
-    {0, XF86XK_MonBrightnessUp, spawn, SHCMD("brightnessctl set +10%")},
-    {0, XF86XK_MonBrightnessDown, spawn, SHCMD("brightnessctl set 10%-")},
+  {0, XF86XK_MonBrightnessUp, spawn, SHCMD("brightnessctl set +10%")},
+  {0, XF86XK_MonBrightnessDown, spawn, SHCMD("brightnessctl set 10%-")},
 };
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static const Button buttons[] = {
-	/* click                event mask      button          function        argument */
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+  /* click                event mask      button          function        argument */
+  { ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+  { ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+  { ClkWinTitle,          0,              Button2,        zoom,           {0} },
+  { ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+  { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
+  { ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
+  { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+  { ClkTagBar,            0,              Button1,        view,           {0} },
+  { ClkTagBar,            0,              Button3,        toggleview,     {0} },
+  { ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+  { ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 
