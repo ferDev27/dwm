@@ -45,7 +45,7 @@ static const char *colors[][3]      = {
   [SchemeTitle]  = { col_tifg, col_tibg,  col_tibg  },
 };
 
-//  Selected tags
+// Selected tags
 static const char *tagsel[][2] = {
   { col_tag1, col_tagbg },
   { col_tag2, col_tagbg },
@@ -58,7 +58,7 @@ static const char *tagsel[][2] = {
   { col_tag9, col_tagbg },
 };
 
-//  Occupied tags
+// Occupied tags
 static const char *tagOcc[][2] = {
   { col_tag1, col_barbg },
   { col_tag2, col_barbg },
@@ -70,6 +70,21 @@ static const char *tagOcc[][2] = {
   { col_tag8, col_barbg },
   { col_tag9, col_barbg },
 };
+
+
+// Main software 
+const char MY_TERMINAL[] = "alacritty";
+const char MY_MENU[] = "dmenu_run -l 10";
+const char MY_BROWSER[] = "firefox";
+const char MOD_COLORTEMP[] = "redshift -O 4400";
+const char RESET_COLORTEMP[] = "redshift -x";
+
+// Scripts (.local/bin) 
+const char SCRIPT_EMOJI[] = "dmenuunicode";
+const char SCRIPT_SC[] = "screenshot";
+const char SCRIPT_SC_SELECTED[] = "screenshot-s";
+const char SCRIPT_PICKER[] = "picker";
+
 
 //  Underline
 static const unsigned int ulinepad	    = 0;	/* horizontal padding between the underline and tag */
@@ -122,7 +137,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { MY_TERMINAL, NULL };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -196,24 +211,24 @@ static const Key keys[] = {
   { MODKEY, XK_Return, spawn, {.v = termcmd } },
 
     //  Dmenu
-  { MODKEY, XK_space, spawn, SHCMD("dmenu_run -l 10")}, 
-  { MODKEY|ControlMask, XK_space, spawn, SHCMD("dmenuunicode")}, 
+  { MODKEY, XK_space, spawn, SHCMD(MY_MENU)}, 
+  { MODKEY|ControlMask, XK_space, spawn, SHCMD(SCRIPT_EMOJI)}, 
 
     //  Browser
-  { MODKEY, XK_b, spawn, SHCMD("firefox")}, 
+  { MODKEY, XK_b, spawn, SHCMD(MY_BROWSER)}, 
 
     //  Healthy eyes
-  { MODKEY, XK_r, spawn, SHCMD("redshift -O 4400") },
-  { MODKEY|ShiftMask, XK_r, spawn, SHCMD("redshift -x") },
+  { MODKEY, XK_r, spawn, SHCMD(MOD_COLORTEMP) },
+  { MODKEY|ShiftMask, XK_r, spawn, SHCMD(RESET_COLORTEMP) },
 
     //  Screenshots
-  { MODKEY, XK_s, spawn, SHCMD("screenshot")}, 
-  { MODKEY|ShiftMask, XK_s, spawn, SHCMD("screenshot-s")}, 
+  { MODKEY, XK_s, spawn, SHCMD(SCRIPT_SC)}, 
+  { MODKEY|ShiftMask, XK_s, spawn, SHCMD(SCRIPT_SC_SELECTED)}, 
 
     //  Color picker
-  { MODKEY, XK_p, spawn, SHCMD("picker")}, 
+  { MODKEY, XK_p, spawn, SHCMD(SCRIPT_PICKER)}, 
 
-    //  SysKeys
+    //  System Keys
     //  Volume
   {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%")},
   {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%")},
