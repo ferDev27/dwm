@@ -36,7 +36,7 @@ static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=11:weight=bold:antialias=true:autohint=true" };
 
 // Set theme
-#include "./themes/ferDev27.h"
+#include "./themes/catppuccin.h"
 
 static const char *colors[][3]      = {
   /*               fg         bg         border   */
@@ -100,7 +100,7 @@ static const Rule rules[] = {
   /* class            instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
   { "Alacritty",      NULL,     NULL,           0,         0,          1,           0,        -1 },
   { "st-256color",    NULL,     NULL,           0,         0,          1,           0,        -1 },
-  { "firefox",        NULL,     NULL,           1 << 0,    0,          0,          -1,        -1 },
+  { MY_BROWSER,        NULL,     NULL,           1 << 0,    0,          0,          -1,        -1 },
   { NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
