@@ -1,1 +1,22 @@
-/patches
+# Ignore everything
+/*
+!.gitignore
+!.gitmodules
+
+# Except for the files and folders we want to track
+!README.md
+!config.def.h
+!config.mk
+!drw.c
+!drw.h
+!dwm.1
+!dwm.c
+!dwm.png
+!fibonacci.c
+!gaplessgrid.c
+!LICENSE
+!Makefile
+!movestack.c
+!transistent.c
+!util.c
+!util.h
