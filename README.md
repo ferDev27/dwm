@@ -87,7 +87,7 @@ sudo pacman -S ranger
  
 **Screen and Audio:**
 - brightnessctl
-- pamixer
+- pulseaudio pulseaudio-alsa pamixer
 
 ```bash
 sudo pacman -S brightnessctl pamixer

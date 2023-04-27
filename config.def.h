@@ -36,7 +36,7 @@ static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=11:weight=bold:antialias=true:autohint=true" };
 
 // Set theme
-#include "./themes/catppuccin.h"
+#include "./themes/ferDev27.h"
 
 static const char *colors[][3]      = {
   /*               fg         bg         border   */
