@@ -87,10 +87,10 @@ sudo pacman -S ranger
  
 **Screen and Audio:**
 - brightnessctl
-- pamixer
+- pulseaudio pamixer
 
 ```bash
-sudo pacman -S brightnessctl pamixer
+sudo pacman -S brightnessctl pulseaudio pulseaudio-alsa pamixer
 ```
  
 **Screenshots:**
