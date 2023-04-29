@@ -158,6 +158,11 @@ sudo pacman -S picom
 ```bash
 sudo pacman -S feh
 ```
+- lock screen
+
+```bash
+sudo pacman -S xautolock slock
+```
 - ffmpeg
 
 ```bash
