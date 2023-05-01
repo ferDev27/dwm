@@ -11,7 +11,7 @@
 /* See LICENSE file for copyright and license details. */
 
 //  Border/Gaps
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 
@@ -74,7 +74,7 @@ static const char *tagOcc[][2] = {
 
 // Main software 
 const char MY_TERMINAL[] = "alacritty";
-const char MY_MENU[] = "dmenu_run -l 10";
+const char MY_MENU[] = "dmenu_run -l 10 -c -p 'Open '";
 const char MY_BROWSER[] = "firefox";
 const char MOD_COLORTEMP[] = "redshift -O 4400";
 const char RESET_COLORTEMP[] = "redshift -x";
