@@ -11,8 +11,8 @@
 /* See LICENSE file for copyright and license details. */
 
 //  Border/Gaps
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 6;        /* gaps between windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 
 //  Swallow
@@ -29,7 +29,7 @@ static const int showsystray                = 1;    /* 0 means no systray */
 //  Bar
 static const int showbar            = 1;    /* 0 means no bar */
 static const int topbar             = 1;    /* 0 means bottom bar */
-static const int horizpadbar        = 2;    /* horizontal padding for statusbar */
+static const int horizpadbar        = 0;    /* horizontal padding for statusbar */
 static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 
 // Font
@@ -46,7 +46,7 @@ static const char *colors[][3]      = {
 };
 
 // Selected tags
-static const char *tagsel[][2] = {
+static const char *tagSel[][2] = {
   { col_tag1, col_tagbg },
   { col_tag2, col_tagbg },
   { col_tag3, col_tagbg },
@@ -110,16 +110,11 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
-#include "gaplessgrid.c"
-#include "fibonacci.c"
-
 static const Layout layouts[] = {
   /* symbol     arrange function */
   { "[]=",      tile },    /* first entry is default */
   { "|M|",      centeredmaster },
-  { "[@]",      spiral },
-  { ":::",      gaplessgrid },
-  { "TTT",      bstack },
+  { ":::",      grid },
   { "><>",      NULL },    /* no layout function means floating behavior */
   { "[M]",      monocle },
   { NULL,       NULL },

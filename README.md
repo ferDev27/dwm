@@ -21,12 +21,10 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - *alwayscenter*
 - *attachbottom*
 - *autostart(.local/share/dwm/autostart.sh)*
-- *bottomstack*
 - *centeredmaster*
 - *cursorwarp*
 - *cyclelayouts*
-- *fibonacci*
-- *gaplessgrid*
+- *grid*
 - *movestack*
 - *pertag*
 - *rainbowtags*
@@ -46,7 +44,6 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - Fix transparent borders when using a compositor like picom.
 - Added dynamic layout symbol highlighting.
 - Occupied tags match it's own color, box indicator removed.
-- Streamline some layouts patches.
 - Fix gaps not displaying correctly.
 
 

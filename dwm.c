@@ -285,7 +285,7 @@ static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 static void centeredmaster(Monitor *m);
-static void bstack(Monitor *m);
+static void grid(Monitor *m);
 
 static pid_t getparentprocess(pid_t p);
 static int isdescprocess(pid_t p, pid_t c);
@@ -2148,15 +2148,15 @@ setup(void)
 	cursor[CurResize] = drw_cur_create(drw, XC_sizing);
 	cursor[CurMove] = drw_cur_create(drw, XC_fleur);
 	/* init appearance */
-	if (LENGTH(tags) > LENGTH(tagsel))
+	if (LENGTH(tags) > LENGTH(tagSel))
 		die("too few color schemes for the tags");
 	scheme = ecalloc(LENGTH(colors) + 1, sizeof(Clr *));
 	scheme[LENGTH(colors)] = drw_scm_create(drw, colors[0], 3);
 	for (i = 0; i < LENGTH(colors); i++)
 		scheme[i] = drw_scm_create(drw, colors[i], 3);
-	tagscheme = ecalloc(LENGTH(tagsel), sizeof(Clr *));
-	for (i = 0; i < LENGTH(tagsel); i++)
-		tagscheme[i] = drw_scm_create(drw, tagsel[i], 2);
+	tagscheme = ecalloc(LENGTH(tagSel), sizeof(Clr *));
+	for (i = 0; i < LENGTH(tagSel); i++)
+		tagscheme[i] = drw_scm_create(drw, tagSel[i], 2);
 	tagschemeOcc = ecalloc(LENGTH(tagOcc), sizeof(Clr *));
 	for (i = 0; i < LENGTH(tagOcc); i++)
 		tagschemeOcc[i] = drw_scm_create(drw, tagOcc[i], 2);
@@ -3203,34 +3203,30 @@ centeredmaster(Monitor *m)
 	}
 }
 
-static void
-bstack(Monitor *m) {
-	int w, h, mh, mx, tx, ty, tw;
-	unsigned int i, n;
+void
+grid(Monitor *m) {
+	unsigned int i, n, cx, cy, cw, ch, aw, ah, cols, rows;
 	Client *c;
 
-	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
-	if (n == 0)
-		return;
-	if (n > m->nmaster) {
-		mh = m->nmaster ? m->mfact * m->wh : 0;
-		tw = m->ww / (n - m->nmaster);
-		ty = m->wy + mh;
-	} else {
-		mh = m->wh;
-		tw = m->ww;
-		ty = m->wy;
-	}
-	for (i = mx = 0, tx = m->wx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++) {
-		if (i < m->nmaster) {
-			w = (m->ww - mx) / (MIN(n, m->nmaster) - i);
-			resize(c, m->wx + mx, m->wy, w - (2 * c->bw), mh - (2 * c->bw) + (n > 1 ? gappx : 0), 0);
-			mx += WIDTH(c);
-		} else {
-			h = m->wh - mh;
-			resize(c, tx, ty, tw - (2 * c->bw), h - (2 * c->bw) + (n > 1 ? gappx : 0), 0);
-			if (tw != m->ww)
-				tx += WIDTH(c);
-		}
+	for(n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next))
+		n++;
+
+	/* grid dimensions */
+	for(rows = 0; rows <= n/2; rows++)
+		if(rows*rows >= n)
+			break;
+	cols = (rows && (rows - 1) * rows >= n) ? rows - 1 : rows;
+
+	/* window geoms (cell height/width) */
+	ch = m->wh / (rows ? rows : 1);
+	cw = m->ww / (cols ? cols : 1);
+	for(i = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next)) {
+		cx = m->wx + (i / rows) * cw;
+		cy = m->wy + (i % rows) * ch;
+		/* adjust height/width of last row/column's windows */
+		ah = ((i + 1) % rows == 0) ? m->wh - ch * rows : gappx; // Ajusted, so gaps match other layouts
+		aw = (i >= rows * (cols - 1)) ? m->ww - cw * cols : gappx;
+		resize(c, cx, cy, cw - 2 * c->bw + aw, ch - 2 * c->bw + ah, False);
+		i++;
 	}
 }
