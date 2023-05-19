@@ -1,10 +1,10 @@
-//  ferDev27
+//  Deep
 
 //Bar
 static const char col_barbg[]		= "#0f1119"; 
 
 //Tag square bg
-static const char col_tagbg[]		= "#171a26";  
+static const char col_tagbg[]		= "#1c1f2e";  
 
 // Window border
 static const char col_winSel[]		= "#7BC2BB";

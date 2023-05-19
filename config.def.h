@@ -36,7 +36,7 @@ static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=11:weight=bold:antialias=true:autohint=true" };
 
 // Set theme
-#include "./themes/deep.h"
+#include "./themes/catppuccin.h"
 
 static const char *colors[][3]      = {
   /*               fg         bg         border   */
@@ -147,8 +147,8 @@ static const Key keys[] = {
   { MODKEY|ShiftMask, XK_k, movestack, {.i = -1 } },
 
     //  Resize 
-  { MODKEY|ShiftMask, XK_c, incnmaster, {.i = +1 } },
-  { MODKEY, XK_c, incnmaster, {.i = -1 } },
+  { MODKEY, XK_plus, incnmaster, {.i = +1 } },
+  { MODKEY, XK_minus, incnmaster, {.i = -1 } },
   { MODKEY|ControlMask, XK_h, setmfact, {.f = -0.05} },
   { MODKEY|ControlMask, XK_l, setmfact, {.f = +0.05} },
 
