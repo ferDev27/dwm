@@ -46,6 +46,7 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 - Added dynamic layout symbol highlighting.
 - Occupied tags match it's own color, box indicator removed.
 - Fix gaps not displaying correctly.
+- Tags highlight only when windows are open on them.
 
 
 # Future

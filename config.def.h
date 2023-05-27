@@ -11,7 +11,7 @@
 /* See LICENSE file for copyright and license details. */
 
 //  Border/Gaps
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 
@@ -71,6 +71,10 @@ static const char *tagOcc[][2] = {
   { col_tag9, col_barbg },
 };
 
+// Empty Tags
+static const char *tagEmpty[][2] = {
+  { col_icoUnsel, col_tagbg },
+};
 
 // Main software 
 const char MY_TERMINAL[] = "alacritty";
@@ -88,7 +92,7 @@ const char SCRIPT_PICKER[] = "picker";
 
 //  Underline
 static const unsigned int ulinepad	    = 0;	/* horizontal padding between the underline and tag */
-static const unsigned int ulinestroke	= 1;	/* thickness / height of the underline */
+static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
 static const int ulineall 		        = 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 

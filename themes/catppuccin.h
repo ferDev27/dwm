@@ -4,7 +4,7 @@
 static const char col_barbg[]		= "#1B1B29"; 
 
 //Tag square bg
-static const char col_tagbg[]		= "#242438";  
+static const char col_tagbg[]		= "#222236";  
 
 // Window border
 static const char col_winSel[]		= "#ECBFBD";

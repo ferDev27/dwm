@@ -330,6 +330,7 @@ static Cur *cursor[CurLast];
 static Clr **scheme;
 static Clr **tagscheme;
 static Clr **tagschemeOcc;
+static Clr **tagschemeEmp;
 static Display *dpy;
 static Drw *drw;
 static Monitor *mons, *selmon;
@@ -1063,7 +1064,11 @@ drawbar(Monitor *m)
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(tags[i]);
         /* Occupied colored tags */
-        drw_setscheme(drw, (m->tagset[m->seltags] & 1 << i ? tagscheme[i] : occ & 1 << i ? tagschemeOcc[i] : scheme[SchemeNorm]));
+        if (m->sel) {
+          drw_setscheme(drw, (m->tagset[m->seltags] & 1 << i ? tagscheme[i] : occ & 1 << i ? tagschemeOcc[i] : scheme[SchemeNorm]));
+        } else {
+          drw_setscheme(drw, (m->tagset[m->seltags] & 1 << i ? tagschemeEmp[0] : occ & 1 << i ? tagschemeOcc[i] : scheme[SchemeNorm]));
+        }
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
         /* Underline */
 		if (ulineall || m->tagset[m->seltags] & 1 << i) /* if there are conflicts, just move these lines directly underneath both 'drw_setscheme' and 'drw_text' :) */
@@ -2160,6 +2165,9 @@ setup(void)
 	tagschemeOcc = ecalloc(LENGTH(tagOcc), sizeof(Clr *));
 	for (i = 0; i < LENGTH(tagOcc); i++)
 		tagschemeOcc[i] = drw_scm_create(drw, tagOcc[i], 2);
+	tagschemeEmp = ecalloc(LENGTH(tagEmpty), sizeof(Clr *));
+	for (i = 0; i < LENGTH(tagEmpty); i++)
+		tagschemeEmp[i] = drw_scm_create(drw, tagEmpty[i], 2);
 	/* init system tray */
 	updatesystray();
 	/* init bars */
