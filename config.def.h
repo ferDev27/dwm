@@ -11,7 +11,7 @@
 /* See LICENSE file for copyright and license details. */
 
 //  Border/Gaps
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 
@@ -36,7 +36,7 @@ static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=11:weight=bold:antialias=true:autohint=true" };
 
 // Set theme
-#include "./themes/catppuccin.h"
+#include "./themes/hack.h"
 
 static const char *colors[][3]      = {
   /*               fg         bg         border   */
@@ -77,7 +77,7 @@ static const char *tagEmpty[][2] = {
 };
 
 // Main software 
-const char MY_TERMINAL[] = "alacritty";
+const char MY_TERMINAL[] = "st";
 const char MY_MENU[] = "dmenu_run -l 10 -c -p 'Open '";
 const char MY_BROWSER[] = "firefox";
 const char MOD_COLORTEMP[] = "redshift -O 4400";
