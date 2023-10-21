@@ -88,6 +88,7 @@ const char CODE_EDITOR[] = "code";
 const char SCRIPT_EMOJI[] = "dmenuunicode";
 const char SCRIPT_SC[] = "screenshot";
 const char SCRIPT_SC_SELECTED[] = "screenshot-s";
+const char SCRIPT_SC_FOCUSED[] = "screenshot-f";
 const char SCRIPT_PICKER[] = "picker";
 
 
@@ -230,6 +231,8 @@ static const Key keys[] = {
     //  Screenshots
   { MODKEY, XK_s, spawn, SHCMD(SCRIPT_SC)}, 
   { MODKEY|ShiftMask, XK_s, spawn, SHCMD(SCRIPT_SC_SELECTED)}, 
+  { MODKEY|ControlMask, XK_s, spawn, SHCMD(SCRIPT_SC_FOCUSED)}, 
+
 
     //  Color picker
   { MODKEY, XK_p, spawn, SHCMD(SCRIPT_PICKER)}, 
