@@ -36,7 +36,7 @@ static const int vertpadbar         = 12;   /* vertical padding for statusbar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=11:weight=bold:antialias=true:autohint=true" };
 
 // Set theme
-#include "./themes/hack.h"
+#include "./themes/ferDev27.h"
 
 static const char *colors[][3]      = {
   /*               fg         bg         border   */
@@ -78,10 +78,11 @@ static const char *tagEmpty[][2] = {
 
 // Main software 
 const char MY_TERMINAL[] = "st";
-const char MY_MENU[] = "dmenu_run -l 10 -c -p 'Open '";
+const char MY_MENU[] = "dmenu_run -l 10 -c -p '󰌧 '";
 const char MY_BROWSER[] = "firefox";
 const char MOD_COLORTEMP[] = "redshift -O 4400";
 const char RESET_COLORTEMP[] = "redshift -x";
+const char CODE_EDITOR[] = "code";
 
 // Scripts (.local/bin) 
 const char SCRIPT_EMOJI[] = "dmenuunicode";
@@ -218,6 +219,9 @@ static const Key keys[] = {
 
     //  Browser
   { MODKEY, XK_b, spawn, SHCMD(MY_BROWSER)}, 
+
+    // Code editor
+  { MODKEY, XK_c, spawn, SHCMD(CODE_EDITOR)}, 
 
     //  Healthy eyes
   { MODKEY, XK_r, spawn, SHCMD(MOD_COLORTEMP) },
