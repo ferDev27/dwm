@@ -4,11 +4,7 @@
 !.gitmodules
 
 # Except for the files and folders we want to track
-!modules/themes/
-!modules/basic/
-!modules/keybinds/
-!modules/software/
-!modules/layouts/
+!modules/
 !screenshots/
 !README.md
 !config.def.h
