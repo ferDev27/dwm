@@ -1,10 +1,10 @@
-//  ferDev27
+//  Soft ferDev27
 
 //Bar
-static const char col_barbg[]		= "#0f101a";
+static const char col_barbg[]		= "#18181f"; // Soft
 
 //Tag square bg
-static const char col_tagbg[]		= "#161826";  
+static const char col_tagbg[]		= "#22222b"; // Soft 
 
 // Window border
 static const char col_winSel[]		= "#a151d3";
@@ -16,7 +16,7 @@ static const char col_icoUnsel[]	= "#373b52";
 
 // title
 static const char col_tifg[]         = "#a151d3"; 
-static const char col_tibg[]         = "#0f101a";
+static const char col_tibg[]         = "#18181f";  // Soft
 
 // Tags
 static const char col_tag1[]         = "#FF662A"; 

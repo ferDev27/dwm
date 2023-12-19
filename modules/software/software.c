@@ -1,6 +1,6 @@
 // Main software 
 const char MY_TERMINAL[] = "st";
-const char MY_MENU[] = "dmenu_run -l 10 -c -p '󰌧 '";
+const char MY_MENU[] = "dmenu_run -l 15 -c -p '󰌧 '";
 const char MY_BROWSER[] = "firefox";
 const char MOD_COLORTEMP[] = "redshift -O 4400";
 const char RESET_COLORTEMP[] = "redshift -x";

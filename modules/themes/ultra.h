@@ -1,10 +1,10 @@
-//  ferDev27
+//  Ultra ferDev27
 
 //Bar
-static const char col_barbg[]		= "#0f101a";
+static const char col_barbg[]		= "#080214";
 
 //Tag square bg
-static const char col_tagbg[]		= "#161826";  
+static const char col_tagbg[]		= "#10111c";  
 
 // Window border
 static const char col_winSel[]		= "#a151d3";
@@ -12,11 +12,11 @@ static const char col_winUnSel[]	= "#1a1b26";
 
 // tag icons sel(selected) and unsel(unselected)
 static const char col_icosel[]		= "#f1ffff";
-static const char col_icoUnsel[]	= "#373b52";
+static const char col_icoUnsel[]	= "#1e2133";
 
 // title
 static const char col_tifg[]         = "#a151d3"; 
-static const char col_tibg[]         = "#0f101a";
+static const char col_tibg[]         = "#080214";
 
 // Tags
 static const char col_tag1[]         = "#FF662A"; 

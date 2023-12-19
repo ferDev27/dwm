@@ -11,7 +11,7 @@
 /* See LICENSE file for copyright and license details. */
 
 // Set theme
-#include "./modules/themes/ferDev27.h"
+#include "./modules/themes/ultra.h"
 // Set basic 
 #include "./modules/basic/basic.c"
 // Set software
