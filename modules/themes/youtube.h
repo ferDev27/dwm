@@ -30,4 +30,4 @@ static const char col_tag8[]         = "#f1ffff";
 static const char col_tag9[]         = "#f1ffff"; 
 
 //  Tags                     Firefox   Dev    Term     VMs     Git    Docker  Files   Media    Misc   
-static const char *tags[] = { "   ", " {} ", "   ", " 󰠥  ", " 󰊢  ", " 󰡨  ", "   ", " 󰋩  ", " 󰌨  " };
+static const char *tags[] = { "   ", "   ", "   ", " 󰠥  ", " 󰊢  ", " 󰡨  ", "   ", " 󰋩  ", " 󰌨  " };

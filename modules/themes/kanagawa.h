@@ -19,8 +19,8 @@ static const char col_tifg[]         = "#957fb8";
 static const char col_tibg[]         = "#1A1A21";//"#1c1c24";
 
 // Tags
-static const char col_tag1[]         = "#FF9F65"; 
-static const char col_tag2[]         = "#7e9cd8"; 
+static const char col_tag1[]         = "#89CDE7"; 
+static const char col_tag2[]         = "#5FB950"; 
 static const char col_tag3[]         = "#dcd7ba";
 static const char col_tag4[]         = "#c16f3f";
 static const char col_tag5[]         = "#c34043"; 
@@ -30,4 +30,4 @@ static const char col_tag8[]         = "#76946a";
 static const char col_tag9[]         = "#903fc1"; 
 
 //  Tags                     Firefox   Dev    Term     VMs     Git    Docker  Files   Media    Misc   
-static const char *tags[] = { "   ", " {} ", "   ", " 󰠥  ", " 󰊢  ", " 󰡨  ", "   ", " 󰋩  ", " 󰌨  " };
+static const char *tags[] = { "   ", "   ", "   ", " 󰠥  ", " 󰊢  ", " 󰡨  ", "   ", " 󰋩  ", " 󰌨  " };
