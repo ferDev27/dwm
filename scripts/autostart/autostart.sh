@@ -25,7 +25,7 @@ setxkbmap -option "caps:escape_shifted_capslock" &
 dunst &
 
 # Wallpaper
-# feh --bg-fill /path/to/wallpaper.jpg &
+feh --bg-fill $HOME/.config/dwm/modules/wallpapers/sw-mount.png
 
 # Status bar
 dwmblocks &
