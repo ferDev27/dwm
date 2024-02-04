@@ -10,6 +10,7 @@
 - [Future plans](#future)
 - [Dependencies](#dependencies)
 - [Additional software](#additional-software)
+- [Installation](#installation)
 
 
 # Showcase
@@ -224,3 +225,19 @@ sudo pacman -S jq tidy
 ```bash
 sudo pacman -S gpick imagemagick
 ```
+
+# Installation
+I highly recommend placing the dwm folder into your .config folder and clone the repo
+
+```bash
+cd $HOME/.config
+git clone https://github.com/ferDev27/dwm.git
+```
+
+I provide a simple install script for dwm, dmenu and dwmblocks
+
+```bash
+cd dwm 
+sudo dwmi 
+```
+

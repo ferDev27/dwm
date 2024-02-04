@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#      _                      _                      _
+#  ___| |__        _ __   ___| |___      _____  _ __| | __
+# / __| '_ \ _____| '_ \ / _ | __\ \ /\ / / _ \| '__| |/ /
+# \__ | |_) |_____| | | |  __| |_ \ V  V | (_) | |  |   <
+# |___|_.__/      |_| |_|\___|\__| \_/\_/ \___/|_|  |_|\_\
+
+# Got this from Luke Smith
+# https://github.com/lukesmithxyz
+
+update() {
+    sum=0
+    for arg; do
+        read -r i < "$arg"
+        sum=$(( sum + i ))
+    done
+    cache=/tmp/${1##*/}
+    [ -f "$cache" ] && read -r old < "$cache" || old=0
+    printf %d\\n "$sum" > "$cache"
+    printf %d\\n $(( sum - old ))
+}
+
+rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
+tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
+
+printf " %4sB  %4sB" $(numfmt --to=iec $rx $tx)

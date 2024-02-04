@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#      _               _
+#  ___| |__         __| | ___
+# / __| '_ \ _____ / _` |/ _ \
+# \__ | |_) |_____| (_| |  __/
+# |___|_.__/       \__,_|\___|
+
+# GitHub: https://github.com/ferDev27
+
+cat $HOME/.dmrc | grep "Session" | awk -F '=' '{print "  " $2}'
+
