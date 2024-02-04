@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# Color
+green="\e[0;32m\033[1m"
+end="\033[0m\e[0m"
+
+sudo make clean install &&
+
+echo -e "
+$green
++-------------------------------------+
+|                                     |
+|          dwm installed !            |
+|                                     |
++-------------------------------------+
+$end" &&
+
+cd $HOME/.config/dwm/modules/dmenu/ && sudo make clean install &&
+
+echo -e "
+$green
++-------------------------------------+
+|                                     |
+|         dmenu installed !           |
+|                                     |
++-------------------------------------+
+$end" &&
+
+cd $HOME/.config/dwm/modules/dwmblocks && sudo make clean install &&
+
+echo -e "
+$green
++-------------------------------------+
+|                                     |
+|       dwmblocks installed !         |
+|                                     |
++-------------------------------------+
+$end" 
