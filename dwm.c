@@ -299,7 +299,7 @@ static const char autostartblocksh[] = "autostart_blocking.sh";
 static const char autostartsh[] = "autostart.sh";
 static const char broken[] = "broken";
 static const char dwmdir[] = "dwm";
-static const char localshare[] = ".local/share";
+static const char autostartdir[] = ".config/dwm/scripts/autostart";
 static char stext[1024];
 static int screen;
 static int sw, sh;           /* X display screen geometry width, height */
@@ -1878,7 +1878,7 @@ runautostart(void)
 		return;
 
 	/* if $XDG_DATA_HOME is set and not empty, use $XDG_DATA_HOME/dwm,
-	 * otherwise use ~/.local/share/dwm as autostart script directory
+	 * otherwise use ~/.config/dwm/scripts/autostart as autostart script directory
 	 */
 	xdgdatahome = getenv("XDG_DATA_HOME");
 	if (xdgdatahome != NULL && *xdgdatahome != '\0') {
@@ -1891,10 +1891,9 @@ runautostart(void)
 		}
 	} else {
 		/* space for path segments, separators and nul */
-		pathpfx = ecalloc(1, strlen(home) + strlen(localshare)
-		                     + strlen(dwmdir) + 3);
+		pathpfx = ecalloc(1, strlen(home) + strlen(autostartdir) + 2);
 
-		if (sprintf(pathpfx, "%s/%s/%s", home, localshare, dwmdir) < 0) {
+		if (sprintf(pathpfx, "%s/%s", home, autostartdir) < 0) {
 			free(pathpfx);
 			return;
 		}

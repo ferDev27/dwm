@@ -127,6 +127,15 @@ sudo pacman -S noto-fonts-emoji
 sudo pacman -S libnotify notification-daemon
 ```
 
+```bash
+sudo pacman -S dunst
+```
+
+**System trace (optional)**
+```bash
+sudo pacman -S cbatticon volumeicon
+```
+
 - In the case of Tiling Window Managers, create this file:
 ```bash
 sudo touch /usr/share/dbus-1/services/org.freedesktop.Notifications.service
@@ -196,6 +205,12 @@ sudo pacman -S xclip
 ```bash
 sudo pacman -S wmname pacman-contrib
 ```
+
+- Xbanish
+```bash
+yay -S xbanish
+```
+
 
 **Optional:**
 - Better formatting output:<br>

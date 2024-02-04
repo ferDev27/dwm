@@ -5,6 +5,7 @@
 
 # Except for the files and folders we want to track
 !modules/
+!scripts/
 !screenshots/
 !README.md
 !config.def.h

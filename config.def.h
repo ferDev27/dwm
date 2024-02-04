@@ -11,15 +11,15 @@
 /* See LICENSE file for copyright and license details. */
 
 // Set theme
-#include "./modules/themes/ultra.h"
+#include "./modules/wm/themes/ultra.h"
 // Set basic 
-#include "./modules/basic/basic.c"
+#include "./modules/wm/basic/basic.c"
 // Set software
-#include "./modules/software/software.c"
+#include "./modules/wm/software/software.c"
 // Set layouts
-#include "./modules/layouts/layouts.c"
+#include "./modules/wm/layouts/layouts.c"
 // Set keybinds
-#include "./modules/keybinds/keybinds.c"
+#include "./modules/wm/keybinds/keybinds.c"
 
 
 
