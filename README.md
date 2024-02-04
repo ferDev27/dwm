@@ -84,6 +84,12 @@ sudo pacman -S alacritty
 ```bash
 sudo pacman -S ranger
 ```
+
+**Internet browser:**
+```bash
+sudo pacman -S qutebrowser
+sudo pacman -S firefox
+```
  
 **Screen and Audio:**
 - brightnessctl
@@ -132,7 +138,7 @@ sudo pacman -S libnotify notification-daemon
 sudo pacman -S dunst
 ```
 
-**System trace (optional)**
+**System trace**
 ```bash
 sudo pacman -S cbatticon volumeicon
 ```

@@ -6,10 +6,8 @@ const char MOD_COLORTEMP[] = "redshift -O 4400";
 const char RESET_COLORTEMP[] = "redshift -x";
 const char CODE_EDITOR[] = "code";
 
-// Scripts (.local/bin) 
-const char SCRIPT_EMOJI[] = "dmenuunicode";
-const char SCRIPT_SC[] = "screenshot";
-const char SCRIPT_SC_SELECTED[] = "screenshot-s";
-const char SCRIPT_SC_FOCUSED[] = "screenshot-f";
-const char SCRIPT_PICKER[] = "picker";
+const char SCRIPT_SC[] = "$HOME/.config/dwm/scripts/util/screenshot";
+const char SCRIPT_SC_SELECTED[] = "$HOME/.config/dwm/scripts/util/screenshot-s";
+const char SCRIPT_SC_FOCUSED[] = "$HOME/.config/dwm/scripts/util/screenshot-f";
+const char SCRIPT_PICKER[] = "$HOME/.config/dwm/scripts/util/picker";
 

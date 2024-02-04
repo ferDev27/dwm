@@ -88,7 +88,6 @@ static const Key keys[] = {
 
     //  Dmenu
   { MODKEY, XK_space, spawn, SHCMD(MY_MENU)}, 
-  { MODKEY|ControlMask, XK_space, spawn, SHCMD(SCRIPT_EMOJI)}, 
 
     //  Browser
   { MODKEY, XK_b, spawn, SHCMD(MY_BROWSER)}, 

@@ -1,0 +1,20 @@
+#!/bin/sh
+#  ____                               _           _
+# / ___|  ___ _ __ ___  ___ _ __  ___| |__   ___ | |_ 
+# \___ \ / __| '__/ _ \/ _ | '_ \/ __| '_ \ / _ \| __|
+#  ___) | (__| | |  __|  __| | | \__ | | | | (_) | |_
+# |____/ \___|_|  \___|\___|_| |_|___|_| |_|\___/ \__|
+#
+# GitHub: https://github.com/ferDev27
+# Folder ~/Pictures/Screenshots
+
+IMG="$HOME/Pictures/Screenshots/$(date '+%d-%m-%Y_%H%M%S')-sc.png"
+
+scrot $IMG \
+    -e 'xclip -selection clipboard -t image/png -i $f'
+
+notify-send -a "Scrot" \
+        -i "$IMG" \
+        -t 4000 \
+        "Screenshot taken !" "copied to clipboard"
+
