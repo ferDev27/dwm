@@ -69,7 +69,6 @@ sudo pacman -S base-devel xorg-server xorg-xinit libx11 libxinerama libxft webki
 
 **Terminal:**
 - [st](https://st.suckless.org/)
-- I have my [own](https://github.com/ferDev27/st) build as well 
 
 - Alacritty
 ```bash
@@ -177,7 +176,7 @@ sudo pacman -S feh
 - lock screen
 
 ```bash
-sudo pacman -S xautolock slock
+sudo pacman -S xautolock
 ```
 - ffmpeg
 
