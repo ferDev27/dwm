@@ -15,7 +15,18 @@ $green
 +-------------------------------------+
 $end" &&
 
-cd $HOME/.config/dwm/modules/dmenu/ && sudo make clean install &&
+cd $HOME/.config/dwm/modules/st && sudo make clean install &&
+
+echo -e "
+$green
++-------------------------------------+
+|                                     |
+|           st installed !            |
+|                                     |
++-------------------------------------+
+$end" &&
+
+cd $HOME/.config/dwm/modules/dmenu && sudo make clean install &&
 
 echo -e "
 $green
@@ -33,6 +44,17 @@ $green
 +-------------------------------------+
 |                                     |
 |       dwmblocks installed !         |
+|                                     |
++-------------------------------------+
+$end"
+
+cd $HOME/.config/dwm/modules/slock && sudo make clean install &&
+
+echo -e "
+$green
++-------------------------------------+
+|                                     |
+|         slock installed !           |
 |                                     |
 +-------------------------------------+
 $end"

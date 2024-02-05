@@ -15,7 +15,18 @@ $red
 +-------------------------------------+
 $end" &&
 
-cd $HOME/.config/dwm/modules/dmenu/ && sudo make uninstall &&
+cd $HOME/.config/dwm/modules/st && sudo make uninstall &&
+
+echo -e "
+$red
++-------------------------------------+
+|                                     |
+|          st uninstalled !           |
+|                                     |
++-------------------------------------+
+$end" &&
+
+cd $HOME/.config/dwm/modules/dmenu && sudo make uninstall &&
 
 echo -e "
 $red
@@ -33,6 +44,18 @@ $red
 +-------------------------------------+
 |                                     |
 |      dwmblocks uninstalled !        |
+|                                     |
++-------------------------------------+
+$end"
+
+
+cd $HOME/.config/dwm/modules/slock && sudo make uninstall &&
+
+echo -e "
+$red
++-------------------------------------+
+|                                     |
+|        slock uninstalled !          |
 |                                     |
 +-------------------------------------+
 $end"
