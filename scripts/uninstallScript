@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# Color
+red="\e[0;31m\033[1m"
+end="\033[0m\e[0m"
+
+cd $HOME/.config/dwm && sudo make uninstall &&
+
+echo -e "
+$red
++-------------------------------------+
+|                                     |
+|         dwm uninstalled !           |
+|                                     |
++-------------------------------------+
+$end" &&
+
+cd $HOME/.config/dwm/modules/dmenu/ && sudo make uninstall &&
+
+echo -e "
+$red
++-------------------------------------+
+|                                     |
+|        dmenu uninstalled !          |
+|                                     |
++-------------------------------------+
+$end" &&
+
+cd $HOME/.config/dwm/modules/dwmblocks && sudo make uninstall &&
+
+echo -e "
+$red
++-------------------------------------+
+|                                     |
+|      dwmblocks uninstalled !        |
+|                                     |
++-------------------------------------+
+$end"

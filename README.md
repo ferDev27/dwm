@@ -243,7 +243,7 @@ git clone https://github.com/ferDev27/dwm.git
 I provide a simple install script for dwm, dmenu and dwmblocks
 
 ```bash
-cd dwm 
-sudo dwmi 
+cd dwm/scripts 
+./installScript 
 ```
 

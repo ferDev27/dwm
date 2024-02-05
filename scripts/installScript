@@ -4,7 +4,7 @@
 green="\e[0;32m\033[1m"
 end="\033[0m\e[0m"
 
-sudo make clean install &&
+cd $HOME/.config/dwm && sudo make clean install &&
 
 echo -e "
 $green
@@ -35,4 +35,4 @@ $green
 |       dwmblocks installed !         |
 |                                     |
 +-------------------------------------+
-$end" 
+$end"
