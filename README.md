@@ -1,5 +1,6 @@
 # ferDev27's custom build of DWM
 
+![dwmls](screenshots/dwmls.png)
 ![dwm1](screenshots/dwm1.png)
 ![dwm2](screenshots/dwm2.png)
 
