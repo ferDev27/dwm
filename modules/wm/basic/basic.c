@@ -1,3 +1,6 @@
+//  Tags
+static const char *tags[] = { "   ", "   ", "   ", " 󰊢  ", "   ", "   ", " 󰋩  ", "   ", " 󰘸  " };
+
 //  Border/Gaps
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
