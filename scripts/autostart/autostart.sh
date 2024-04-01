@@ -31,7 +31,6 @@ feh --bg-fill $HOME/.config/dwm/modules/wallpapers/sw-mount.png
 dwmblocks &
 
 # System trace
-cbatticon -u 5 &
 volumeicon &
 
 # wmname

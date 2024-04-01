@@ -115,7 +115,7 @@ sudo pacman -S redshift
 - Ubuntu Mono Nerd Font
 
 ```bash
-sudo pacman -S ttf-ubuntu-mono-nerd 
+sudo pacman -S ttf-ubuntu-mono-nerd ttf-jetbrains-mono-nerd 
 ```
 
 - Emoji font
@@ -140,7 +140,7 @@ sudo pacman -S dunst
 
 **System trace**
 ```bash
-sudo pacman -S cbatticon volumeicon
+sudo pacman -S volumeicon
 ```
 
 - In the case of Tiling Window Managers, create this file:

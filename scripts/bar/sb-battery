@@ -1,0 +1,40 @@
+#!/bin/sh
+
+#      _           _           _   _
+#  ___| |__       | |__   __ _| |_| |_ ___ _ __ _   _
+# / __| '_ \ _____| '_ \ / _` | __| __/ _ | '__| | | |
+# \__ | |_) |_____| |_) | (_| | |_| ||  __| |  | |_| |
+# |___|_.__/      |_.__/ \__,_|\__|\__\___|_|   \__, |
+#                                               |___/
+case $BLOCK_BUTTON in
+	1) notify-send "hello" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+for battery in /sys/class/power_supply/BAT?*; do
+	# If non-first battery, print a space separator.
+	[ -n "${capacity+x}" ] && printf " "
+	# Sets up the status and capacity
+    status="$(cat "$battery/status" 2>&1)"
+	capacity="$(cat "$battery/capacity" 2>&1)"
+    
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 100 ] && icon="󰁹 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 90 ] && icon="󰂂 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 80 ] && icon="󰂁 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 70 ] && icon="󰂀 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 60 ] && icon="󰁿 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 50 ] && icon="󰁾 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 40 ] && icon="󰁽 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 30 ] && icon="󰁼 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 20 ] && icon="󰁻 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 10 ] && icon="󰁺 "
+
+
+	[ "$status" = "Charging" ] && icon="  "
+	[ "$status" = "Full" ] && icon="󱟢 "
+	[ "$status" = "Not charging" ] && icon="  "
+	[ "$status" = "Unknown" ] && icon="󰂑 "
+
+	# Prints the info
+	printf "%s%d%%" "$icon" "$capacity";
+done && printf "\\n"
