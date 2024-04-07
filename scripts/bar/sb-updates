@@ -10,5 +10,8 @@
 # GitHub: https://github.com/ferDev27
 
 UPDS=$(checkupdates | wc -l)
-echo "   $UPDS"
+
+[ "$UPDS" -gt 0 ] && echo "^c#f4c869^   $UPDS" 
+[ "$UPDS" -eq 0 ] && echo "^c#6bf469^   $UPDS" 
+
 

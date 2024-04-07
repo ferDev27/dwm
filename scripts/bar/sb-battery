@@ -6,10 +6,6 @@
 # \__ | |_) |_____| |_) | (_| | |_| ||  __| |  | |_| |
 # |___|_.__/      |_.__/ \__,_|\__|\__\___|_|   \__, |
 #                                               |___/
-case $BLOCK_BUTTON in
-	1) notify-send "hello" ;;
-	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
-esac
 
 for battery in /sys/class/power_supply/BAT?*; do
 	# If non-first battery, print a space separator.
@@ -18,22 +14,22 @@ for battery in /sys/class/power_supply/BAT?*; do
     status="$(cat "$battery/status" 2>&1)"
 	capacity="$(cat "$battery/capacity" 2>&1)"
     
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 100 ] && icon="󰁹 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 90 ] && icon="󰂂 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 80 ] && icon="󰂁 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 70 ] && icon="󰂀 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 60 ] && icon="󰁿 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 50 ] && icon="󰁾 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 40 ] && icon="󰁽 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 30 ] && icon="󰁼 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 20 ] && icon="󰁻 "
-	[ "$status" = "Discharging" ] && [ "$capacity" -le 10 ] && icon="󰁺 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 100 ] && icon="^c#7094ef^󰁹 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 90 ] && icon="^c#7094ef^󰂂 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 80 ] && icon="^c#7094ef^󰂁 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 70 ] && icon="^c#ebef70^󰂀 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 60 ] && icon="^c#ebef70^󰁿 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 50 ] && icon="^c#efc170^󰁾 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 40 ] && icon="^c#efc170^󰁽 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 30 ] && icon="^c#ef7070^󰁼 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 20 ] && icon="^c#ef7070^󰁻 "
+	[ "$status" = "Discharging" ] && [ "$capacity" -le 10 ] && icon="^c#ed2f2f^󰁺 "
 
 
-	[ "$status" = "Charging" ] && icon="  "
-	[ "$status" = "Full" ] && icon="󱟢 "
-	[ "$status" = "Not charging" ] && icon="  "
-	[ "$status" = "Unknown" ] && icon="󰂑 "
+	[ "$status" = "Charging" ] && icon="^c#d5cbd6^  "
+	[ "$status" = "Full" ] && icon="^c#9bef70^󱟢 "
+	[ "$status" = "Not charging" ] && icon="^c#f7ee45^  "
+	[ "$status" = "Unknown" ] && icon="^c#eeeeee^󰂑 "
 
 	# Prints the info
 	printf "%s%d%%" "$icon" "$capacity";
