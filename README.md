@@ -138,11 +138,6 @@ sudo pacman -S libnotify notification-daemon
 sudo pacman -S dunst
 ```
 
-**System trace**
-```bash
-sudo pacman -S volumeicon
-```
-
 - In the case of Tiling Window Managers, create this file:
 ```bash
 sudo touch /usr/share/dbus-1/services/org.freedesktop.Notifications.service

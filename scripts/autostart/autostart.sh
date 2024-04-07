@@ -30,9 +30,6 @@ feh --bg-fill $HOME/.config/dwm/modules/wallpapers/sw-mount.png
 # Status bar
 dwmblocks &
 
-# System trace
-volumeicon &
-
 # wmname
 wmname LG3D 
 

@@ -7,6 +7,9 @@
 # |___|_.__/      |_.__/ \__,_|\__|\__\___|_|   \__, |
 #                                               |___/
 
+# Modify from Luke Smith: https://github.com/lukesmithxyz 
+# GitHub: https://github.com/ferDev27
+
 for battery in /sys/class/power_supply/BAT?*; do
 	# If non-first battery, print a space separator.
 	[ -n "${capacity+x}" ] && printf " "

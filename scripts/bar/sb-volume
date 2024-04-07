@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#      _                     _
+#  ___| |__      __   _____ | |_   _ _ __ ___   ___
+# / __| '_ \ ____\ \ / / _ \| | | | | '_ ` _ \ / _ \
+# \__ | |_) |_____\ V | (_) | | |_| | | | | | |  __/
+# |___|_.__/       \_/ \___/|_|\__,_|_| |_| |_|\___|
+
+# GitHub: https://github.com/ferDev27
+
+# Check if muted
+[ $(pamixer --get-mute) = true ] && echo "^c#e05147^  0" && exit 
+
+vol="$(pamixer --get-volume)"
+
+[ "$vol" -le 0 ] && pamixer --set-volume 0 && echo "^c#e05147^  0" && exit
+[ "$vol" -gt "0" ] && icon="^c#7f99f9^  " 
+[ "$vol" -ge "30" ] && icon="^c#85f97f^  " 
+[ "$vol" -ge "70" ] && icon="^c#f9f77f^  "
+[ "$vol" -ge 100 ] && pamixer --set-volume 100 && vol="100"
+
+echo "$icon$vol"
