@@ -53,8 +53,6 @@ Suckless **[dwm](https://dwm.suckless.org/)**
 
 # Future
 **Future plans and patches I would like to implement**
-- preserveonrestart patch
-- restartsig patch
 - Keep it up to date with the latest dwm commits 
 
 

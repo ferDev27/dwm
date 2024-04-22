@@ -12,8 +12,9 @@
 /* commands */
 static const char *termcmd[]  = { MY_TERMINAL, NULL };
 
-#include <X11/XF86keysym.h>
 #include "movestack.c"
+#include "selfrestart.c"
+#include <X11/XF86keysym.h>
 
 static const Key keys[] = {
 
@@ -79,6 +80,9 @@ static const Key keys[] = {
 
     //  Quit
   { MODKEY|ControlMask, XK_q, quit, {0} },
+
+    // Restart
+  { MODKEY|ControlMask, XK_r, self_restart, {0} },
 
     // Lockscreen
   { MODKEY, XK_l, spawn, SHCMD("slock")}, 

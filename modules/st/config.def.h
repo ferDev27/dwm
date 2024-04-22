@@ -11,7 +11,7 @@
 // --------------------------- Theme Selection ---------------------------------
 #include "./themes/ferDev27.h"
 
-static char *font = "JetBrains Mono Nerd Font:size=11:weight=regular:antialias=true:autohint=true";
+static char *font = "UbuntuMono Nerd Font:size=13:weight=regular:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
     "Noto Color emoji:size=12:antialias=true:autohint=true"
@@ -38,7 +38,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
-static float chscale = 1.0;
+static float chscale = 1.05;
 
 /*
  * word delimiter string

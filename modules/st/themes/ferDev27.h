@@ -1,16 +1,17 @@
 static const char *colorname[] = {
 
-    "#1d202f", "#F07178", "#cdea9f", "#ffd47e",
-    "#93bbff", "#d3a7ee", "#98e4ff", "#bfd5de",
+    // Normal
+    "#414868", "#df5b61", "#78b892", "#de8f78", "#6791c9", "#bc83e3", "#67afc1",
+    "#c0caf5",
 
-
-    "#414868", "#F07178", "#cdea9f", "#ffd47e",
-    "#93bbff", "#d3a7ee", "#98e4ff", "#bfd5de",
+    // Bright
+    "#414868", "#e8646a", "#81c19b", "#e79881", "#709ad2", "#c58cec", "#70b8ca",
+    "#c0caf5",
 
     [255] = 0,
 
     "#364a82", // 256
-    "#C778DD", // 257 -> Cursor
+    "#6e6a86", // 257 -> Cursor
     "#c0caf5", // 258 -> Foreground
     "#181922", // 259 -> Background 
 };
