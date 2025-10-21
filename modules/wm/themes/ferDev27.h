@@ -19,13 +19,13 @@ static const char col_tifg[]         = "#a151d3";
 static const char col_tibg[]         = "#080214";
 
 // Tags
-static const char col_tag1[]         = "#FF5A2C"; 
-static const char col_tag2[]         = "#1DD516";
-static const char col_tag3[]         = "#EE99A0"; 
-static const char col_tag4[]         = "#b4befe"; 
-static const char col_tag5[]         = "#1F97EE"; 
-static const char col_tag6[]         = "#F8C63D"; 
-static const char col_tag7[]         = "#9BBC59"; 
-static const char col_tag8[]         = "#DD534C";
-static const char col_tag9[]         = "#7e4dcc"; 
+static const char col_tag1[]         = "#7aa2f7"; 
+static const char col_tag2[]         = "#e0af68";
+static const char col_tag3[]         = "#9ece6a"; 
+static const char col_tag4[]         = "#c0caf5"; 
+static const char col_tag5[]         = "#9d7cd8"; 
+static const char col_tag6[]         = "#1abc9c"; 
+static const char col_tag7[]         = "#FFFFFF"; 
+static const char col_tag8[]         = "#FFFFFF";
+static const char col_tag9[]         = "#FFFFFF"; 
 

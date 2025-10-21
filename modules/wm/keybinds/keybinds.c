@@ -21,9 +21,13 @@ static const Key keys[] = {
     //  Movement 
   { MODKEY, XK_j, focusstack, {.i = +1 } },
   { MODKEY, XK_k, focusstack, {.i = -1 } },
+  { MODKEY, XK_Down, focusstack, {.i = +1 } },
+  { MODKEY, XK_Up, focusstack, {.i = -1 } },
 
   { MODKEY|ShiftMask, XK_j, movestack, {.i = +1 } },
   { MODKEY|ShiftMask, XK_k, movestack, {.i = -1 } },
+  { MODKEY|ShiftMask, XK_Down, movestack, {.i = +1 } },
+  { MODKEY|ShiftMask, XK_Up, movestack, {.i = -1 } },
 
     //  Resize 
   { MODKEY, XK_plus, incnmaster, {.i = +1 } },
@@ -104,9 +108,9 @@ static const Key keys[] = {
   { MODKEY|ShiftMask, XK_r, spawn, SHCMD(RESET_COLORTEMP) },
 
     //  Screenshots
-  { MODKEY, XK_s, spawn, SHCMD(SCRIPT_SC)}, 
-  { MODKEY|ShiftMask, XK_s, spawn, SHCMD(SCRIPT_SC_SELECTED)}, 
-  { MODKEY|ControlMask, XK_s, spawn, SHCMD(SCRIPT_SC_FOCUSED)}, 
+  { MODKEY, XK_Print, spawn, SHCMD(SCRIPT_SC)}, 
+  { MODKEY|ShiftMask, XK_Print, spawn, SHCMD(SCRIPT_SC_SELECTED)}, 
+  { MODKEY|ControlMask, XK_Print, spawn, SHCMD(SCRIPT_SC_FOCUSED)}, 
 
 
     //  Color picker

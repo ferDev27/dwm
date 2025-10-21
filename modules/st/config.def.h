@@ -9,7 +9,7 @@
 */
 
 // --------------------------- Theme Selection ---------------------------------
-#include "./themes/aura.h"
+#include "./themes/ferDev27.h"
 
 static char *font = "UbuntuMono Nerd Font:size=13:weight=regular:antialias=true:autohint=true";
 /* Spare fonts */
